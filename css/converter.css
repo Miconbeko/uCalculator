@@ -1,0 +1,57 @@
+.converter {
+    display: grid;
+    color: var(--conventer-color);
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--conventer-bg-color);
+    grid-area: 3 / 1 / span 1 / span 4;
+}
+
+.converter-menu-from,
+.converter-menu-to {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    position: relative;
+    padding: 0.3em 0;
+}
+
+.converter-menu-content {
+    color: var(--black-color);
+    display: none;
+    position: absolute;
+    overflow-y: auto;
+    height: 300%;
+    width: 100%;
+    bottom: 100%;
+    background-color: white;
+}
+
+.selected-convert-from,
+.selected-convert-to {
+    height: 1em;
+}
+
+.conventer-group {
+    text-align: left;
+}
+
+.conventer-group-name {
+    text-align: center;
+}
+
+.conventer-group > hr {
+    width: 100%;
+    outline: 1px solid var(--primary-color-1);
+}
+
+.conventer-group-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3em;
+    line-height: 1.2em;
+}
+
+.conventer-group-menu > a:hover {
+    color: var(--primary-color-3);
+}

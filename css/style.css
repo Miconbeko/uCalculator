@@ -1,0 +1,125 @@
+@import "nullstyle.css";
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300;500&display=swap');
+/* .wrapper {
+    font-family: Geologica;
+    color: #fff;
+}
+
+.calculator__container {
+    max-width: 600px;
+    max-height: 800px;
+    margin: 100px auto;
+}
+
+.calculator__content {
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 15px 15px 0 0;
+}
+.calculator__tittle {
+    margin-top: 20px;
+    font-size: 36px;
+}
+.result__field {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#calcExpression{
+    color: #bababa;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#calcNum {
+    padding: 5px;
+    font-size: 26px;
+}
+
+.calculator__btn-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.calc-btn {
+    margin: 3px;
+    padding: 15px;
+    background-color: #5e5e5e;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.calc-btn:hover {
+    background-color: #949494;
+}
+
+.calc-btn > a {
+    display: inline-block;
+    text-align: center;
+} */
+
+/* * {
+    outline: 1px solid green;
+} */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+body {
+    background: rgb(230,47,137);
+    background: linear-gradient(45deg, rgba(230,47,137,1) 0%, rgba(9,9,121,1) 35%, rgba(145,86,226,1) 100%);
+    font-family: Geologica;
+}
+
+.centered-wrp {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    background-color: var(--black-color);
+    border-radius: 20px;
+    color: var(--primary-color-2);
+    justify-content: center;
+    align-items: center;
+    line-height: 2em;
+    padding: 100px;
+    z-index: 10000;
+    /* width: 40%;
+    height: 70%; */
+}
+
+.highlight {
+    color: var(--primary-color-3);
+}
+
+.close-btn {
+    margin-top: 40px;
+    background-color: var(--primary-color-3);
+    border-radius: 20px;
+    color: var(--black-color);
+    padding: 0.5em;
+}
+
+.close-btn:hover {
+    background-color: #ffa600ce;
+}   

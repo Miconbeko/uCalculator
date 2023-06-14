@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="stylesheet" href="css/converter.css">
+    <script src="https://kit.fontawesome.com/b8a8d6497b.js" crossorigin="anonymous"></script>
+    <!-- <script type="module" src="js/utils.js"></script> -->
+</head>
+<body>
+    <!-- <div class="title">Cumculator</div> -->
+    <div class="centered-wrp">
+        <div class="instructions">
+            <ul>
+                <li><span class="highlight">Result field</span> - current expression and result are displayed here.</li>
+                <li><span class="highlight">History field</span> - click on expression to put it in the calculator.</li>
+                <li><span class="highlight">Keyboard</span> - you can enter expressions using your keyboard.</li>
+                <li><span class="highlight">МR</span> - gets value from memory to current number.</li>
+                <li><span class="highlight">MC</span> - clears memory.</li>
+                <li><span class="highlight">M+</span> - set memory value to current memory + current number in calculator.</li>
+                <li><span class="highlight">M-</span> - set memory value to current memory - current number in calculator.</li>
+                <li><span class="highlight">!x</span> - factorial of x.</li>
+                <li><span class="highlight">%</span> - return value of x / 100.</li>
+                <li><span class="highlight">x^n</span> - power of n.</li>
+                <li><span class="highlight">log2</span> - log of 2.</li>
+                <li><span class="highlight">ln</span> - log of 10.</li>
+                <li><span class="highlight">CE</span> - clear expression entry.</li>
+                <li><span class="highlight">C</span> - clear entire data.</li>
+                <li><span class="highlight">From\To</span> - click and choose system and units to convert from and to.</li>
+                <li><span class="highlight">Convert</span> - execute convert button.</li>
+            </ul>
+            <button class="close-btn">Thank you, instruction button!</button>
+        </div>
+        <div class="calculator">
+            <div class="calculator-block-wrp extended-block-wrp">
+                <div class="history-field"></div>
+                <div class="keyboard">
+                    <div class="calc-btn func"><a id="fact">x!</a></div>
+                    <div class="calc-btn func"><a id="powExtended">x^n</a></div>
+                    <div class="calc-btn func"><a id="log2">log2</a></div>
+                    <div class="calc-btn func"><a id="ln">ln</a></div>
+                    <div class="calc-btn oper"><a id="mr">MR</a></div>
+                    <div class="calc-btn oper"><a id="mc">MC</a></div>
+                    <div class="calc-btn oper"><a id="mPlus">M+</a></div>
+                    <div class="calc-btn oper"><a id="mMinus">M-</a></div>
+                    <div class="converter">
+                        <div class="converter-menu-from">
+                            
+                            <span>FROM:</span>
+                            <span class="selected-convert-from">Meters</span>
+                            <div class="converter-menu-content">
+                                <div class="conventer-group distance-group">
+                                    <div class="conventer-group-name">
+                                        <span>Distance</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-3">Milimeters</a>
+                                        <a num="-2">Centimeters</a>
+                                        <a num="-1">Decimeters</a>
+                                        <a num="0" id="defaultConvertFrom">Meters</a>
+                                        <a num="3">Kilometers</a>
+                                    </div>
+                                </div>
+
+                                <div class="conventer-group weight-group">
+                                    <div class="conventer-group-name">
+                                        <span>Weight</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-6">Miligrams</a>
+                                        <a num="-3">Grams</a>
+                                        <a num="0">Kilograms</a>
+                                        <a num="3">Tonnes</a>
+                                        <a num="6">Kilotones</a>
+                                        <a num="9">Megatones</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="conventer-group area-group">
+                                    <div class="conventer-group-name">
+                                        <span>Area</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-6">Square milimeters</a>
+                                        <a num="-4">Square centimeters</a>
+                                        <a num="-2">Square decimeters</a>
+                                        <a num="0">Square meters</a>
+                                        <a num="6">Square klilometers</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="converter-menu-to">
+                            
+                            <span>TO:</span>
+                            <span class="selected-convert-to">Kilometers</span>
+                            <div class="converter-menu-content">
+                                <div class="conventer-group distance-group">
+                                    <div class="conventer-group-name">
+                                        <span>Distance</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-3">Milimeters</a>
+                                        <a num="-2">Centimeters</a>
+                                        <a num="-1">Decimeters</a>
+                                        <a num="0">Meters</a>
+                                        <a num="3" id="defaultConvertTo">Kilometers</a>
+                                    </div>
+                                </div>
+
+                                <div class="conventer-group weight-group">
+                                    <div class="conventer-group-name">
+                                        <span>Weight</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-6">Miligrams</a>
+                                        <a num="-3">Grams</a>
+                                        <a num="0">Kilograms</a>
+                                        <a num="3">Tonnes</a>
+                                        <a num="6">Kilotones</a>
+                                        <a num="9">Megatones</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="conventer-group area-group">
+                                    <div class="conventer-group-name">
+                                        <span>Area</span>
+                                    </div>
+                                    <hr>
+                                    <div class="conventer-group-menu">
+                                        <a num="-6">Square milimeters</a>
+                                        <a num="-4">Square centimeters</a>
+                                        <a num="-2">Square decimeters</a>
+                                        <a num="0">Square meters</a>
+                                        <a num="6">Square klilometers</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="calc-btn num"><a id="pi">&pi;</a></div>
+                    <div class="calc-btn num"><a id="e">&#8494;</a></div>
+                    <div class="calc-btn apply"><a id="convert">Convert</a></div>
+                    <div class="calc-btn oper"><a id="help">Help</a></div>
+                </div>
+            </div>
+
+            <div class="calculator-block-wrp">
+                <div class="result-field">
+                    <div class="slider-wrp">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>    
+                    <span id="calcExpression"></span>
+                    <span id="calcNum">0</span>
+                </div>
+                <div class="keyboard">
+                    <div class="calc-btn func"><a id="percent">%</a></div>
+                    <div class="calc-btn oper"><a id="CE">CE</a></div>
+                    <div class="calc-btn oper"><a id="C">C</a></div>
+                    <div class="calc-btn oper"><a id="remove"><i class="fa-solid fa-delete-left"></i></a></div>
+                    <div class="calc-btn func"><a id="denominator">1/x</a></div>
+                    <div class="calc-btn func"><a id="pow">x <sup>2</sup></a></div>
+                    <div class="calc-btn func"><a id="sqrt">2√x</a></div>
+                    <div class="calc-btn oper"><a id="div">÷</a></div>
+                    <div class="calc-btn num"><a id="num7">7</a></div>
+                    <div class="calc-btn num"><a id="num8">8</a></div>
+                    <div class="calc-btn num"><a id="num9">9</a></div>
+                    <div class="calc-btn oper"><a id="mul">x</a></div>
+                    <div class="calc-btn num"><a id="num4">4</a></div>
+                    <div class="calc-btn num"><a id="num5">5</a></div>
+                    <div class="calc-btn num"><a id="num6">6</a></div>
+                    <div class="calc-btn oper"><a id="sub">-</a></div>
+                    <div class="calc-btn num"><a id="num1">1</a></div>
+                    <div class="calc-btn num"><a id="num2">2</a></div>
+                    <div class="calc-btn num"><a id="num3">3</a></div>
+                    <div class="calc-btn oper"><a id="sum">+</a></div>
+                    <div class="calc-btn num-symb"><a id="negate"></a>&#177;</div>
+                    <div class="calc-btn num"><a id="num0">0</a></div>
+                    <div class="calc-btn num num-symb"><a id="dot">,</a></div>
+                    <div class="calc-btn oper"><a id="equal">=</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/conventer.js"></script>
+</body>
+</html>
